@@ -1,0 +1,53 @@
+<!DOCTYPE html
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+        }
+        h1 {
+            color: #333;
+            margin-top: 20px;
+        }
+        #output {
+            font-size: 18px;
+            margin-top: 20px;
+            color: #0066cc;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Simple App</h1>
+    <p>Click the button below to display the current date and time:</p>
+    <button onclick="showDateTime()">Show Date & Time</button>
+    <div id="output"></div>
+
+    <script>
+        function showDateTime() {
+            const now = new Date();
+            const dateTime = now.toLocaleString(); // Formats date and time
+            document.getElementById("output").innerText = "Current Date & Time: " + dateTime;
+        }
+    </script>
+</body>
+</html>
+
